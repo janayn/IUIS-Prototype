@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Access Module</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="body">
+            <img src="images/2.jpg" style="position: absolute; display:none; margin-top: 50px; padding-left: 0px; margin-left: 368px; width:270px;">
+              
+    <div class="divhome">
+            <div id="iconHomes">
+                    <p class="titleee">Events</p>
+                <div class="icons">
+                <li class="dropdown">
+                    <ul>
+                    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()"><img src="images/3.png" alt=""></a>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="home.html">Home</a>
+                            <a href="profile.html">Profile</a>
+                            <a href="schedule.html">Schedule</a>
+                            <a href="grades.html">Grades</a>
+                            <a href="assessment.html">Assessment</a>
+                            <a href="accounts.html">Accounts</a>
+                            <a href="events.html">Events</a>
+                            <a href="index.html">Logout</a>
+                        </div>
+                </li>
+                </ul>
+            </div>
+            <p class="balancing" style="text-decoration: underline;"></p>
+                <p class="dailyy" style="display:none;">Schedule of Events</p>
+               
+                <div class="jzdbox1 jzdbasf jzdcal" style="display: none;">
+
+                        <div class="jzdcalt">April 2018</div>
+                        
+                        <span>Su</span>
+                        <span>Mo</span>
+                        <span>Tu</span>
+                        <span>We</span>
+                        <span>Th</span>
+                        <span>Fr</span>
+                        <span>Sa</span>
+                        
+                        <span>1</span>
+                        <span>2</span>
+                        <span class="circle" data-title="CICT Recognition">3</span>
+                        <span class="circle" data-title="Graduation">4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                        <span>11</span>
+                        <span>12</span>
+                        <span>13</span>
+                        <span>14</span>
+                        <span>15</span>
+                        <span class="circle" data-title="Start of Summer classes">16</span>
+                        <span>17</span>
+                        <span>18</span>
+                        <span>19</span>
+                        <span>20</span>
+                        <span>21</span>
+                        <span>22</span>
+                        <span>23</span>
+                        <span>24</span>
+                        <span>25</span>
+                        <span>26</span>
+                        <span>27</span>
+                        <span>28</span>
+                        <span>29</span>
+                        <span>30</span>
+                        <span class="jzdb"><!--BLANK--></span>
+                        <span class="jzdb"><!--BLANK--></span>
+                        <span class="jzdb"><!--BLANK--></span>
+                        <span class="jzdb"><!--BLANK--></span>
+                        <span class="jzdb"><!--BLANK--></span>
+
+                        </div>  
+    </div>            
+    </div>         
+    </div>
+    </div>
+    <script> 
+        $(document).ready(function(){
+            $(".dropbtn").click(function(){
+                $("#myDropdown").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $('div.jzdbox1').fadeIn(2000);
+            $('.dailyy').fadeIn(2000);
+            $('img').fadeIn(2000);
+                  
+                });
+        </script>
+
+            
+</body>
+</html>

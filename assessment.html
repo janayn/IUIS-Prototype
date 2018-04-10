@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style1.css">
+    <script src="script.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <title>Student Access Module</title>
+</head>
+<body>
+        <div class="body">
+                 <div class="divhome">
+                        <div id="iconHomes">
+                            <p class="titlers">Assessment</p>
+                          <div id="iconss">
+                            <li class="dropdown">
+                                <ul>
+                                <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()"><img src="images/3.png" alt=""></a>
+                                    <div class="dropdown-content" id="myDropdown">
+                                        <a href="home.html">Home</a>  
+                                      <a href="profile.html">Profile</a>
+                                        <a href="schedule.html">Schedule</a>
+                                        <a href="grades.html">Grades</a>
+                                        <a href="assessment.html">Assessment</a>
+                                        <a href="accounts.html">Accounts</a>
+                                        <a href="events.html">Events</a>
+                                        <a href="index.html">Logout</a>
+                                    </div>
+                            </li>
+                            </ul>
+                            </div>
+                            
+                            
+                            <p class="assess" style="text-decoration: underline;"></p>
+                            <p class="assessment" style=" display:none;">Assessment</p>
+                            <p class="userss" style=" display:none;">
+                               <b style="letter-spacing: 1px;">Name:</b> Francisco, Janine Angela N.
+                               <br>
+                               <b style="letter-spacing: 1px;">Course:</b> BS in Information and Technology<br>
+                               <b style="letter-spacing: 1px;">Status: </b> Continuing (Regular) 24 units
+                               <br>
+                               <b style="letter-spacing: 1px;">Student ID:</b> 2015-0476-MN
+                               <br>
+                               <b style="letter-spacing: 1px;">School year: </b> 2017-2018
+                               <br>
+                               <b style="letter-spacing: 1px;">Bracket: </b> BR06
+                               <br>
+                               <b style="letter-spacing: 1px;">Year level: </b> Third year
+                               <br>
+                               <b style="letter-spacing: 1px;">Section: </b>A-ST
+                               <br>
+                               <b style="letter-spacing: 1px;">Semester: </b> Second 
+                               <br>
+                               <b style="letter-spacing: 1px;">Tuition Fee: </b> P4,080
+                               <br>
+                               <b style="letter-spacing: 1px;">Supplemental Fees: </b> P1,450
+                               <br>
+                               <b style="letter-spacing: 1px;">Other Fees: </b> P5,460
+                               <br> 
+                               <br>
+                               <b style="letter-spacing: 1px;">Full Payment: </b> P10,990
+                               <br>
+                               <b style="letter-spacing: 1px;">Half Payment </b>P8,990
+                               <br>
+                               
+                           </p>
+                           <a href="iuis.wvsu.edu.ph" style="display:none; margin-top:470px; margin-left:150px;" class="view">View Assessment</a>
+                
+                            
+                            
+                </div>            
+                </div>         
+                </div>
+                </div>
+                <script> 
+                  $(document).ready(function(){
+                      $(".dropbtn").click(function(){
+                          $("#myDropdown").slideToggle("slow");
+                      });
+                  });
+                  $(document).ready(function(){
+            $('a').fadeIn(3000);
+            $('.assessment').fadeIn(3000);
+            $('img').fadeIn(3000);
+            $('.userss').fadeIn(3000);
+           
+                  
+                });
+                  </script>
+</body>
+</html>

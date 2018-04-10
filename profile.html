@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Access Module</title>
+    <link rel="stylesheet" href="style1.css">
+    
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+</head>
+<body>
+        <div class="body">
+                
+            <div class="div1home">
+                
+                    <div id="iconHome">
+                        
+                        <p class="titles">Profile</p>
+                        
+                        <div id="icons">
+                            
+                        <li class="dropdown">
+                            <ul>
+                            <a href="javascript:void(0)" class="dropbtn"><img src="images/3.png" alt=""></a>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <a href="home.html">Home</a>
+                                    <a href="profile.html">Profile</a>
+                                    <a href="schedule.html">Schedule</a>
+                                    <a href="grades.html">Grades</a>
+                                    <a href="assessment.html">Assessment</a>
+                                    <a href="accounts.html">Accounts</a>
+                                    <a href="events.html">Events</a>
+                                    <a href="index.html">Logout</a>
+                                </div>
+                        </li>
+                        </ul>
+                        </div>
+                       
+                <div class="div2home">
+                                 
+                </div>  
+                
+                </div>
+                <p class="user" id="warning" style="margin-top: 0px;padding-top:0px; position:relative; margin-left: 60px; display:none;"></p>
+                <img src="images/2.jpg" style="display:none; position: absolute; margin-top:0px; width:270px;">
+             
+                              
+                <div class="cards">
+
+                    <img id="profpic" onmouseover="onHover();" onmouseout="offHover();"  onclick="changeProfile()" src="images/prof.jpg"style=" display:none;margin-top: 0px;margin-left:95px; padding-top:0px; width:80px;">
+                    </div>
+                    <p style="margin-top:100px; font-size:12px; letter-spacing:1px; text-decoration:underline; margin-left: 70px; display:none;" class="usering">Edit Information</p> 
+                    <div style="margin-top:10px;">  
+                        <div>
+                            
+                                <p class="user" id="name" style="margin-top: 0px; display:none;"> Name: Janine Angela N. Francisco</p>
+                                <br>
+                                <p class="user" id="email" style="margin-top: 0px; display:none;">Email: janineangela.francisco@wvsu.edu.ph</p>
+                                <br>
+                                <p class="user" id="phone" style="margin-top: 0px; display:none;">Phone: 09293294951</p>
+                                <br>
+                                <p class="user" id="address" style="margin-top: 0px; display:none;">Address: Estancia, Kalibo, Aklan</p>
+                                <br>
+                                <p class="user" id="birth" style="margin-top: 0px; display:none;">Birthday: November 11, 1998</p>
+                               
+                                <button id="but" style="display:none; margin-left:190px; margin-top: 0px;" type="submit" >Edit</button>
+             
+                        <form style="margin-top: 10px;" action="javascript:void(0)">
+                                <input style="display:none;" id="user1" type="text" placeholder="Name" required/><br />
+                                 <input style="display:none;" id="user2" type="email" placeholder="Email" required/><br />
+                                <input style="display:none;" id="user3" type="text" placeholder="Phone Number" required/><br>
+                                <input style="display:none;" id="user4" type="text" placeholder="Addresss" required/><br>
+                                <input style="display:none;" id="user5" type="text" placeholder="Birthday" required/><br>
+                    
+                                <button id="butt" style="display:none; margin-left: 100px;" onclick="getInput()" type="submit" ng-click="getFormData(user)">Save</button>
+                         </form>
+                        
+                        </div> 
+                        </div>              
+    </div>         
+    </div>
+    </div>
+    <script> 
+        $(document).ready(function(){
+            $(".dropbtn").click(function(){
+                $("#myDropdown").slideToggle("slow");
+            });
+        });
+
+        
+        </script>
+        <script>
+            function changeProfile() {
+                var x = document.createElement("INPUT");
+                x.setAttribute("type", "file");
+                document.body.appendChild(x);
+            }
+            </script>
+            <script>
+        function getInput() {
+    var x = document.getElementById("user1");
+    var defaultVal = x.defaultValue;
+    var currentVal = x.value;
+
+    var y = document.getElementById("user2");
+    var defaultValu = y.defaultValue;
+    var currentValu = y.value;
+    
+    var z = document.getElementById("user3");
+    var defaultValue = z.defaultValue;
+    var currentValue = z.value;
+
+    var a = document.getElementById("user4");
+    var defaultValuee = a.defaultValue;
+    var currentValuee = a.value;
+
+    var b = document.getElementById("user5");
+    var defaultValueee = b.defaultValue;
+    var currentValueee = b.value;
+    if( $("#user1").val() == '' , $("#user2").val() == '' , $("#user3").val() == ''  , $("#user4").val() == '' , $("#user5").val() == ''){
+        document.getElementById("warning").innerHTML = "Please fill in the text fields.";
+
+    }else{
+    
+
+    document.getElementById("name").innerHTML = "Name: " +  defaultVal
+        + currentVal;
+        document.getElementById("email").innerHTML = "Email: " +  defaultValu
+        + currentValu;
+        document.getElementById("phone").innerHTML = "Phone: " +  defaultValue
+        + currentValue;
+        document.getElementById("address").innerHTML = "Address: " +  defaultValuee
+        + currentValuee;
+        document.getElementById("birth").innerHTML = "Birthday: " +  defaultValueee
+        + currentValueee;
+
+       
+}
+        
+    
+}
+
+$(document).ready(function(){
+            $('div.div2home').fadeIn(2000);
+            $('#but').fadeIn(2000);
+            $('img').fadeIn(2000);
+            $('.user').fadeIn(2000);
+
+                }); 
+
+                $(document).ready(function()
+                {
+                    $("#but").click(function()
+               {
+                $('.usering').fadeToggle(1000);
+            $('#user1').fadeToggle(1000);
+            $('#user2').fadeToggle(1500);
+            $('#user3').fadeToggle(2000);
+            $('#user4').fadeToggle(2500);
+            $('#user5').fadeToggle(3000);
+            $('#butt').fadeToggle(3500);
+               });
+                });
+</script>
+<script>
+   function onHover(){
+
+                $( '#profpic' ).attr("src","images/profs.jpg");
+           
+        }
+        function offHover(){
+
+$( '#profpic' ).attr("src","images/prof.jpg");
+
+}
+</script>
+            
+</body>
+</html>

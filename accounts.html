@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style1.css">
+    <script src="script.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <title>Student Access Module</title>
+</head>
+<body>
+        <div class="body">
+                <img src="images/2.jpg" style="position: absolute; display:none; margin-top: 50px; padding-left: 0px; margin-left: 368px; width:270px;">
+                <div class="divhome">
+                        <div id="iconHomes">
+                            <p class="titleA">Accounts</p>
+                          <div id="iconss">
+                            <li class="dropdown">
+                                <ul>
+                                <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()"><img src="images/3.png" alt=""></a>
+                                    <div class="dropdown-content" id="myDropdown">
+                                        <a href="home.html">Home</a>  
+                                      <a href="profile.html">Profile</a>
+                                        <a href="schedule.html">Schedule</a>
+                                        <a href="grades.html">Grades</a>
+                                        <a href="assessment.html">Assessment</a>
+                                        <a href="accounts.html">Accounts</a>
+                                        <a href="events.html">Events</a>
+                                        <a href="index.html">Logout</a>
+                                    </div>
+                            </li>
+                            </ul>
+                            </div>
+                            
+                            
+                            <p class="balance" style="text-decoration: underline;"></p>
+                            <p class="balances" style=" display:none;">Account Balance</p>
+                            <p class="users" style=" display:none;">
+                               <b style="letter-spacing: 1px;">Name:</b> Francisco, Janine Angela N.
+                               <br>
+                               <b style="letter-spacing: 1px;">Course:</b> BS in Information and Technology<br>
+                               <b style="letter-spacing: 1px;">College: </b> College of ICT
+                               <br>
+                               <b style="letter-spacing: 1px;">Student ID:</b> 2015-0476-MN
+                           </p>
+                
+                            <div class="tablesB" style=" display:none;">
+
+                               <table id="t01">
+                                <tr>
+                                  <th>School Year</th>
+                                  <th>Semester</th> 
+                                  <th>STFAP</th>
+                                  <th>Scholarship</th>
+                                  <th>Date</th>
+                                  <th>OR No.</th>
+                                  <th>Assessment Total</th>
+                                  <th>Payment</th>
+                                  <th>Balance</th>
+                                  
+                                  
+                                </tr>
+                                <tr>
+                                  <td>1516</td>
+                                  <td>First Semester</td>
+                                  <td>BR06</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Total Amount Due:</td>
+                                  <td>10,575.50</td>
+                                  <td></td>
+                                  <td>10,575.50</td>
+                                </tr>
+
+                                <tr>
+                                 <td></td>
+                                  <td></td>
+                                  <td>BR06</td>
+                                  <td></td>
+                                  <td>05/27/15</td>
+                                  <td>742484</td>
+                                  <td>10,575.50</td>
+                                  <td>3,500.00</td>
+                                  <td>7,527.50</td>
+                                </tr>
+                                <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>BR06</td>
+                                        <td></td>
+                                        <td>08/06/15</td>
+                                        <td>7564283</td>
+                                        <td>10,575.50</td>
+                                        <td>4,500.00</td>
+                                        <td>2,727.50</td>
+                                </tr>
+                                <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>BR06</td>
+                                        <td></td>
+                                        <td>08/06/15</td>
+                                        <td>760589</td>
+                                        <td>10,575.50</td>
+                                        <td>2,727.50</td>
+                                        <td>00.00</td>
+                                </tr>
+                                <tr>
+                                        <td>1516</td>
+                                        <td>Second Semester</td>
+                                        <td>BR06</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Total Amount Due:</td>
+                                        <td>11,472.50</td>
+                                        <td></td>
+                                        <td>11,472.50</td>
+                                </tr>
+                                <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>BR06</td>
+                                        <td></td>
+                                        <td>11/06/15</td>
+                                        <td>772879</td>
+                                        <td>11,472.50</td>
+                                        <td>5,000.00</td>
+                                        <td>6,472.50</td>
+                                </tr>
+                                <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>BR06</td>
+                                        <td></td>
+                                        <td>03/21/16</td>
+                                        <td>792421</td>
+                                        <td>11,472.50</td>
+                                        <td>6,472.50</td>
+                                        <td>00.00</td>
+                                </tr>
+                                
+                              </table></div>
+                            
+                </div>            
+                </div>         
+                </div>
+                </div>
+                <script> 
+                  $(document).ready(function(){
+                      $(".dropbtn").click(function(){
+                          $("#myDropdown").slideToggle("slow");
+                      });
+                  });
+                  $(document).ready(function(){
+            $('div.tablesB').fadeIn(3000);
+            $('.balances').fadeIn(3000);
+            $('img').fadeIn(3000);
+            $('.users').fadeIn(3000);
+           
+                  
+                });
+                  </script>
+</body>
+</html>

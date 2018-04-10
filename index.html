@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <title>Student Access Module</title>
+</head>
+<body>
+    <div id="div1">
+    <div id="divs"></div>
+    <form class="container">
+        <img style="display:none;" class="logo" src="./images/WVSU.png" alt="">
+
+        <p  id="Sam" style="color:rgb(3, 73, 168); display:none;">STUDENT ACCESS MODULE</p>
+
+        <hr>
+
+        <p style="display:none; color: rgb(3, 73, 168);" id="login">Login</p>
+       
+        <input style="display:none; " type="text" id="studentid" placeholder="Student ID" class="textbox-trans" ng-model="name">
+        <input style="display:none;" type="password" id="password" placeholder="Password" class="textbox-trans">
+        <a style="display:none;" href="pword.html">Forgot Password</a>
+        
+       <input style="display:none;" class="popup" id="submit" type="button" value="Sign in" onclick="redirect()">
+        
+    </form>
+  
+    </div>
+   <script>
+       
+  $(document).ready(function(){
+                            $("#submit").hover(function(){
+                                $("#submit").css("background-color", "white");
+                                $("#submit").css("color", "rgb(3,73,168)");
+                                $("#submit").css("border", "2px solid rgb(3,73,168)");
+                                    });
+                                });
+   </script>    
+   <script>
+  $(document).ready(function(){
+            $('.logo').fadeIn(2000);
+            $('#Sam').fadeIn(2000);
+            $('img').fadeIn(2000);
+            $('.user').fadeIn(2000);
+            $('#login').fadeToggle(2000);
+            $('#studentid').fadeToggle(2250);
+            $('#password').fadeToggle(2800);
+            $('a').fadeToggle(3000);
+            $('#submit').fadeToggle(3200);
+            
+            
+                }); 
+                function validate(){
+    var username = document.getElementById("studentid").val();
+    var password = document.getElementById("password").val();
+    var b = document.getElementById("studentid");
+    var defaultValueee = b.defaultValue;
+    var currentValueee = b.value;
+    var x = document.getElementById("password");
+    var defaultValueee = x.defaultValue;
+    var currentValueee = x.value;
+
+if( $("#studentid").val() == 'admin' & $("#password").val() == 'admin' )
+{
+    window.location = "file:///C:/Users/Ms/Documents/Janine%20Files/Mobile%20Computing/Mobile%20Computing%20-%20Finals%20Project/FINAL/home.html"; // Redirecting to other page.
+} else {
+    alert("wasap");
+}
+}
+    </script>
+</body>
+</html>

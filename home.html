@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Access Module</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="js/angular.min.js" ></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+</head>
+<body>
+    <div class="body">
+        <img src="images/2.jpg" style="position: absolute; display:none; margin-top: 50px; padding-left: 0px; margin-left: 368px; width:270px;">
+    <div class="div1home">
+            <div id="iconHome">
+                <p class="title">Home</p>
+                
+                <div id="icons">
+                    
+                <li class="dropdown">
+                    <ul>
+                    <a href="javascript:void(0)" class="dropbtn"><img src="images/3.png" alt=""></a>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="home.html">Home</a>
+                            <a href="profile.html">Profile</a>
+                            <a href="schedule.html">Schedule</a>
+                            <a href="grades.html">Grades</a>
+                            <a href="assessment.html">Assessment</a>
+                            <a href="accounts.html">Accounts</a>
+                            <a href="events.html">Events</a>
+                            <a href="index.html">Logout</a>
+                        </div>
+                </li>
+                </ul>
+                </div>
+
+                <div class="div2home" style="display:none;">
+                    
+                </div>  
+                
+                </div>
+                
+                <p class="anona" style="display:none;" ng-bind="name">Welcome, Janine Angela, </p>
+                <p class="anon" style="display:none; padding-top: 90px; padding-left: 80px; letter-spacing: 1px;"><b><u>2015-0476-MN</u></b></p> 
+            
+           <b> <p class="messages" style="margin-top: 200px; margin-left:0px; display:none;"> Messages</p></b>
+            <div class="mssg" style="margin-top:230px;" ng-app="MessagesOfUniversity" ng-cloak ng-controller="myCtrl" >
+                <div id="con1" class="container" ng-repeat="x in message" style="display:none;">
+                    <img ng-repeat="x in message" src="images/CICT.png" alt="CICT" style="width:13%;">
+                    <p class="uy" ng-repeat="x in message">Unpaid sanction, no enrollment.</p>
+                    {{x}}<span class="ex" ng-click="removeItems($index)" style="cursor:pointer; margin-left:180px;">×</span>
+                    <span ng-repeat="x in message" class="time-right">04-02-18</span>
+                    
+                     </div>
+                <div id="con2" class="container" ng-repeat="x in messagee"style="display:none;">
+                    <img src="images/WVSU.png" ng-repeat="x in messagee" alt="WVSU" style="width:13%;">
+                    <p class="uy" ng-repeat="x in messagee">CICT Recognition is on April 3, 2018.</p>
+                    {{x}}<span class="ex" ng-click="removeItem($index)" style="cursor:pointer; margin-left:180px;">×</span>
+                    <span ng-repeat="x in messagee" class="time-right">03-24-18</span>
+                  </div>
+                  
+                  <div id="con3" class="container" ng-repeat="x in messagge" style="display:none;">
+                        <img ng-repeat="x in messagge" src="images/WVSU.png" alt="WVSU" style="width:13%;">
+                        <p ng-repeat="x in messagge" class="uy">Election Day, vote wisely.</p>
+                        {{x}}<span class="ex" ng-click="removeItemz($index)" style="cursor:pointer; margin-left:180px;">×</span>
+                        <span ng-repeat="x in messagge" class="time-right">03-15-18</span>
+                      </div>
+                  
+                      <div id="con4" class="container" ng-repeat="x in messaggee" style="display:none;">
+                            <img ng-repeat="x in messaggee" src="images/CICT.png" alt="WVSU" style="width:13%;">
+                            <p ng-repeat="x in messaggee" class="uy">Thesis Colloquim, 3rd floor GTBI.</p>
+                            {{x}}<span class="ex" ng-click="removeItemers($index)" style="cursor:pointer; margin-left:180px;">×</span>
+                            <span  ng-repeat="x in messaggee" class="time-right">03-12-18</span>
+                          </div>
+                  </div>
+           
+                  
+    </div>         
+    </div>
+    </div>
+        <script> 
+            $(document).ready(function(){
+                $(".dropbtn").click(function(){
+                    $("#myDropdown").slideToggle("slow");
+                });
+            });
+            </script>
+                <script>
+                        var app = angular.module("MessagesOfUniversity", []); 
+                        app.controller("myCtrl", function($scope) {
+                            $scope.message = [""];
+                            $scope.messagee = [""];
+                            $scope.messagge = [""];
+                            $scope.messaggee = [""];
+                            $scope.removeItems = function (x) {
+                                $scope.errortext = "";    
+                                $scope.message.splice(x, 1);
+                            }
+                            $scope.removeItem = function (y) {
+                                        $scope.errortext = "";    
+                                        $scope.messagee.splice(y, 1);
+                            }
+                            $scope.removeItemz = function (x) {
+                                        $scope.errortext = "";    
+                                        $scope.messagge.splice(x, 1);
+                            }
+                            $scope.removeItemers = function (x) {
+                                        $scope.errortext = "";    
+                                        $scope.messaggee.splice(x, 1);
+                            }
+                            
+                        });
+                       
+                        </script>
+                        <script>
+                                $(document).ready(function(){
+            $('div.div2home').fadeIn(2000);
+            $('.anona').fadeIn(2000);
+            $('.anon').fadeIn(2000);
+            $('img').fadeIn(2000);
+            $('.messages').fadeIn(2000);
+            $('#con1').fadeToggle(2000);
+            $('#con2').fadeToggle(3000);
+            $('#con3').fadeToggle(4000);
+            $('#con4').fadeToggle(5000);
+            
+                });   
+                                </script>
+            
+</body>
+</html>
